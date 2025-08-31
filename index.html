@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +7,19 @@
   <link href="styles.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
 </head>
-  <h1> Currency Converter</h1>
-<body>
+  <h1>Currency Converter</h1>
+  
 
+<div class="loading-icon hide"></div>
+<div class="natwar_error hide"> Error</div>  
+<div class="curr_date"></div>
+<div class="body">
+  
   <div class="container">
     <form>
       <p><b>Enter Amount</b></p>
-      <input type="number" name="amt">
+      <div class="warning hide"></div>
+      <input type="number" name="amt" class="control">
       
       <div class="msg"></div>
       
@@ -23,7 +28,7 @@
         <div class="drop-down_from">
           <img src="https://flagsapi.com/US/flat/64.png" class="from">
           
-          <select name="from" class="from_curr">
+          <select name="from" class="from_curr control">
           
           </select>
         </div>
@@ -31,16 +36,17 @@
         <div class="drop-down_to">
           <img src="https://flagsapi.com/IN/flat/64.png"class="to">
           
-          <select name="to" class="to_curr">
+          <select name="to" class="to_curr control">
             
           </select>
         </div>
       </div>
       <p class="info">1 USD = 89 INR</p>
-      <button>Get Exchange</button>
+      <button class="control">Get Exchange</button>
     </form>
   </div>
-</body>
+</div>
+
 <script src="code.js"></script>
 <script src="script.js"></script>
 
